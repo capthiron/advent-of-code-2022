@@ -1,5 +1,5 @@
 # Advent of Code 2022 🕯️🕯️🕯️🕯️ 
-![Go Unit Tests](https://github.com/capthiron/advent-of-code-2022/actions/workflows/go.yml/badge.svg)
+[![Go Unit Tests](https://github.com/capthiron/advent-of-code-2022/actions/workflows/go.yml/badge.svg)](https://github.com/capthiron/advent-of-code-2022/actions/workflows/go.yml)
 
 My personal, sloppy take on the Advent of Code 2022 puzzles 🫠
 
