@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-var inputLines []string = []string {
+var inputLines []string = []string{
 	"A Y",
 	"B X",
 	"C Z",

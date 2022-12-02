@@ -34,7 +34,7 @@ func part1(inputLines []string) int {
 	scoreCalcFn := func(r rule, playerShapeId string) int {
 		switch playerShapeId {
 		case r.winShape.id:
-			return 6 + r.winShape.score 
+			return 6 + r.winShape.score
 		case r.drawShape.id:
 			return 3 + r.drawShape.score
 		case r.looseShape.id:
@@ -45,9 +45,9 @@ func part1(inputLines []string) int {
 	}
 
 	ruleMap := map[string]rule{
-		"A": { y, x, z, scoreCalcFn },
-		"B": { z, y, x, scoreCalcFn },
-		"C": { x, z, y, scoreCalcFn },
+		"A": {y, x, z, scoreCalcFn},
+		"B": {z, y, x, scoreCalcFn},
+		"C": {x, z, y, scoreCalcFn},
 	}
 
 	var score int
@@ -72,7 +72,7 @@ func part2(inputLines []string) int {
 	scoreCalcFn := func(r rule, playersDestiny string) int {
 		switch playersDestiny {
 		case "Z":
-			return 6 + r.winShape.score 
+			return 6 + r.winShape.score
 		case "Y":
 			return 3 + r.drawShape.score
 		case "X":
@@ -83,9 +83,9 @@ func part2(inputLines []string) int {
 	}
 
 	ruleMap := map[string]rule{
-		"A": { paper, rock, scissors, scoreCalcFn },
-		"B": { scissors, paper, rock, scoreCalcFn },
-		"C": { rock, scissors, paper, scoreCalcFn },
+		"A": {paper, rock, scissors, scoreCalcFn},
+		"B": {scissors, paper, rock, scoreCalcFn},
+		"C": {rock, scissors, paper, scoreCalcFn},
 	}
 
 	var score int
@@ -101,17 +101,17 @@ func part2(inputLines []string) int {
 }
 
 type shape struct {
-	id string
+	id    string
 	score int
 }
 
 type rule struct {
-	winShape shape
-	drawShape shape
-	looseShape shape
+	winShape    shape
+	drawShape   shape
+	looseShape  shape
 	scoreCalcFn func(rule, string) int
 }
 
-func(r rule) getScoredPoints(value string) int {
+func (r rule) getScoredPoints(value string) int {
 	return r.scoreCalcFn(r, value)
 }
