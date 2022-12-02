@@ -112,6 +112,6 @@ type rule struct {
 	scoreCalcFn func(rule, string) int
 }
 
-func(r rule) getScoredPoints(choice string) int {
-	return r.scoreCalcFn(r, choice)
+func(r rule) getScoredPoints(value string) int {
+	return r.scoreCalcFn(r, value)
 }
