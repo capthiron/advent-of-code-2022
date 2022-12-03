@@ -1,13 +1,13 @@
 package main
 
 import (
-	"aoc-2022/lib/crypto"
-	"aoc-2022/lib/input"
 	"bufio"
 	"flag"
 	"fmt"
 	"log"
 
+	"github.com/capthiron/advent-of-code-2022/pkg/crypto"
+	"github.com/capthiron/advent-of-code-2022/pkg/input"
 	"github.com/hanson/aes"
 )
 

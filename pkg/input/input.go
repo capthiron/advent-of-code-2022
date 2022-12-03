@@ -1,7 +1,6 @@
 package input
 
 import (
-	"aoc-2022/pkg/crypto"
 	"bufio"
 	"errors"
 	"flag"
@@ -9,6 +8,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/capthiron/advent-of-code-2022/pkg/crypto"
 	"github.com/hanson/aes"
 )
 

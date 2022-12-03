@@ -1,10 +1,11 @@
 package main
 
 import (
-	"aoc-2022/pkg/input"
 	"fmt"
 	"log"
 	"strings"
+
+	"github.com/capthiron/advent-of-code-2022/pkg/input"
 )
 
 func main() {
