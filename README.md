@@ -29,5 +29,5 @@ go run cmd/DAY/main.go --fileName "path/to/input/file" --key "KEY"
 ### How to encrypt input files 🔒
 
 ```bash
-go run cmd/crypto/main.go --key "KEY" --fileName "path/to/input/file" > <path/to/encoded/input/file>
+go run cmd/crypto/main.go --key "KEY" --fileName "path/to/input/file" > <path/to/encrypted/input/file>
 ```
