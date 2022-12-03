@@ -20,7 +20,7 @@ Run solution of days 01-25 by executing
 go run DAY/main.go --fileName "path/to/input/file" [--key "decryptionKey" optional]
 ```
 
-### How to encrypt input
+### How to encrypt input 🔒
 
 ```bash
 go run cryto/main.go --key "encryptionKey" --fileName "input.txt" > input_enc.txt
