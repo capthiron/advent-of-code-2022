@@ -1,7 +1,7 @@
 package main
 
 import (
-	"aoc-2022/lib/input"
+	"aoc-2022/pkg/input"
 	"fmt"
 	"log"
 	"sort"

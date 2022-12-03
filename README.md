@@ -17,11 +17,17 @@ git clone git@github.com:capthiron/advent-of-code-2022.git
 
 Run solution of days 01-25 by executing
 ```bash
-go run DAY/main.go --fileName "path/to/input/file" [--key "decryptionKey" optional]
+go run cmd/DAY/main.go --fileName "path/to/input/file"
 ```
 
-### How to encrypt input 🔒
+or with encrypted input file
 
 ```bash
-go run crypto/main.go --key "encryptionKey" --fileName "input.txt" > input_enc.txt
+go run cmd/DAY/main.go --fileName "path/to/input/file" --key "KEY"
+```
+
+### How to encrypt input files 🔒
+
+```bash
+go run crypto/main.go --key "KEY" --fileName "path/to/input/file" > <path/to/encoded/input/file>
 ```

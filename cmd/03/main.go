@@ -5,7 +5,7 @@ import (
 	"log"
 	"unicode"
 
-	"aoc-2022/lib/input"
+	"aoc-2022/pkg/input"
 	"github.com/deckarep/golang-set/v2"
 )
 

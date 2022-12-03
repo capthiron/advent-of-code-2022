@@ -1,7 +1,7 @@
 package input
 
 import (
-	"aoc-2022/lib/crypto"
+	"aoc-2022/pkg/crypto"
 	"bufio"
 	"errors"
 	"flag"
