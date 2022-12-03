@@ -23,5 +23,5 @@ go run DAY/main.go --fileName "path/to/input/file" [--key "decryptionKey" option
 ### How to encrypt input 🔒
 
 ```bash
-go run cryto/main.go --key "encryptionKey" --fileName "input.txt" > input_enc.txt
+go run crypto/main.go --key "encryptionKey" --fileName "input.txt" > input_enc.txt
 ```
