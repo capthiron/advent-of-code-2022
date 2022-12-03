@@ -23,7 +23,7 @@ func main() {
 
 func part1(inputLines []string) int {
 
-	sum := 0
+	var sum int
 	for _, rucksack := range inputLines {
 
 		rucksackItems := []rune(rucksack)
@@ -41,7 +41,7 @@ func part1(inputLines []string) int {
 
 func part2(inputLines []string) int {
 
-	sum := 0
+	var sum int
 	var group = mapset.NewSet[rune]()
 	for i, rucksack := range inputLines {
 
