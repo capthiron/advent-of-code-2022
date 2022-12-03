@@ -1,24 +1,18 @@
 package main
 
 import (
-	"bufio"
+	"aoc-2022/lib/input"
 	"fmt"
-	"os"
+	"log"
 	"sort"
 	"strconv"
 )
 
 func main() {
 
-	readInput, _ := os.Open("01/input.txt")
-	defer readInput.Close()
-
-	inputScanner := bufio.NewScanner(readInput)
-	inputScanner.Split(bufio.ScanLines)
-
-	var inputLines []string
-	for inputScanner.Scan() {
-		inputLines = append(inputLines, inputScanner.Text())
+	inputLines, err := input.ReadInput()
+	if err != nil {
+		log.Fatalf(err.Error())
 	}
 
 	fmt.Println("Part 1:", part1(inputLines))
