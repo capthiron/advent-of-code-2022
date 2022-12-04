@@ -93,7 +93,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	//create main.go with part1 and part2 returning part1
+	//create main.go with part1 and part2 returning 1
 	mainFile, err := os.Create(fmt.Sprintf("cmd/%s/main.go", *dayFlag))
 	if err != nil {
 		log.Fatal(err)
