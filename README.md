@@ -26,6 +26,12 @@ or with encrypted input file
 go run cmd/DAY/main.go --fileName "path/to/input/file" --key "KEY"
 ```
 
+### How to bootstrap a new day 🎁
+
+```bash
+go run cmd/bootstrap/main.go --day [01-25]
+```
+
 ### How to encrypt input files 🔒
 
 ```bash
