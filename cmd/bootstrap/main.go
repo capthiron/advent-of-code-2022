@@ -70,7 +70,7 @@ func main() {
 		log.Fatal("no day provided")
 	}
 
-	dayHasCorrectFormat, _ := regexp.Match(`^\d\d$`, []byte(*dayFlag)) 
+	dayHasCorrectFormat, _ := regexp.Match(`^\d\d$`, []byte(*dayFlag))
 	if !dayHasCorrectFormat {
 		flag.Usage()
 		log.Fatal("day can only be a value between 01 and 25")
@@ -82,16 +82,16 @@ func main() {
 		log.Fatal("day is out of range")
 	}
 
-	_, err := os.Stat("cmd/" + *dayFlag )
-    if !os.IsNotExist(err) {
-        log.Fatalf("day %s already exists", *dayFlag)
-    }
+	_, err := os.Stat("cmd/" + *dayFlag)
+	if !os.IsNotExist(err) {
+		log.Fatalf("day %s already exists", *dayFlag)
+	}
 
 	//create directory in cmd
 	err = os.Mkdir(fmt.Sprintf("cmd/%s", *dayFlag), 0755)
-    if err != nil {
-        log.Fatal(err)
-    }
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	//create main.go with part1 and part2 returning part1
 	mainFile, err := os.Create(fmt.Sprintf("cmd/%s/main.go", *dayFlag))

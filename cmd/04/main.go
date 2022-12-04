@@ -25,7 +25,7 @@ func part1(inputLines []string) int {
 
 	var fullyContainedSections int
 	for _, line := range inputLines {
-		
+
 		s1, s2 := getCleanupSectionsFrom(line)
 		if s1.Difference(s2).Cardinality() == 0 || s2.Difference(s1).Cardinality() == 0 {
 			fullyContainedSections++
