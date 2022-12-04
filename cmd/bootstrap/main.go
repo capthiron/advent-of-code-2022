@@ -9,8 +9,7 @@ import (
 	"strconv"
 )
 
-const mainGo = `
-package main
+const mainGo = `package main
 
 import (
 	"fmt"
@@ -39,8 +38,7 @@ func part2(inputLines []string) int {
 }
 `
 
-const mainTestGo = `
-package main
+const mainTestGo = `package main
 
 import "testing"
 
