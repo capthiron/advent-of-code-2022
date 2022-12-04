@@ -17,3 +17,10 @@ func TestPart1(t *testing.T) {
 		t.Errorf("expected part1 to return 2 but got %v.", result)
 	}
 }
+
+func TestPart2(t *testing.T) {
+	result := part2(inputLines)
+	if result != 4 {
+		t.Errorf("expected part2 to return 4 but got %v.", result)
+	}
+}

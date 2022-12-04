@@ -18,24 +18,37 @@ func main() {
 	}
 
 	fmt.Println("Part 1:", part1(inputLines))
+	fmt.Println("Part 2:", part2(inputLines))
 }
 
 func part1(inputLines []string) int {
 
 	var fullyContainedSections int
 	for _, line := range inputLines {
-
+		
 		s1, s2 := getCleanupSectionsFrom(line)
 		if s1.Difference(s2).Cardinality() == 0 || s2.Difference(s1).Cardinality() == 0 {
 			fullyContainedSections++
 		}
+
 	}
 
 	return fullyContainedSections
 }
 
 func part2(inputLines []string) int {
-	return 0
+
+	var overlappingPairs int
+	for _, line := range inputLines {
+
+		s1, s2 := getCleanupSectionsFrom(line)
+		if s1.Intersect(s2).Cardinality() > 0 {
+			overlappingPairs++
+		}
+
+	}
+
+	return overlappingPairs
 }
 
 func getCleanupSectionsFrom(line string) (mapset.Set[int], mapset.Set[int]) {
