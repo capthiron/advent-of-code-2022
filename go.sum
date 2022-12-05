@@ -1,4 +1,12 @@
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/deckarep/golang-set/v2 v2.1.0 h1:g47V4Or+DUdzbs8FxCCmgb6VYd+ptPAngjM6dtGktsI=
 github.com/deckarep/golang-set/v2 v2.1.0/go.mod h1:VAky9rY/yGXJOLEDv3OMci+7wtDpOF4IN+y82NBOac4=
+github.com/golang-ds/linkedlist v1.0.0 h1:MrbDfIhQ9SL1my/siW/2va52kKO3IRCFdOa9EfzFFjM=
+github.com/golang-ds/linkedlist v1.0.0/go.mod h1:oRpzIKkdhV7lom4F8dgjDgq+1LGWs37Lge55MwXwNi8=
+github.com/golang-ds/stack v1.0.0 h1:zOMkJBSkFPVkm12WybwHm1hGYlkJvcOonoap7SnGGa4=
+github.com/golang-ds/stack v1.0.0/go.mod h1:RLUdBzRLhhpvSwWJNFqyM27iCDeAVL5NX2mhuzE+jrc=
 github.com/hanson/aes v0.0.0-20211130135935-f00fdb2b639f h1:Y68sK1o3h/epHbQvIhXg1PDcDx1agNR8tZISeIJ/of4=
 github.com/hanson/aes v0.0.0-20211130135935-f00fdb2b639f/go.mod h1:ybYTV8rlHrY+exqnzYn7pfsN34Q4KkzjyPlZeeJ/Z1Q=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
+github.com/stretchr/testify v1.8.0 h1:pSgiaMZlXftHpm5L7V1+rVB+AZJydKsMxsQBIJw4PKk=
+gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
