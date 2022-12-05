@@ -27,24 +27,41 @@ func part1(inputLines []string) string {
 	crateStacks, rules := parseInput(inputLines)
 
 	for rules.Size() != 0 {
+
 		rule, _ := rules.Pop()
+
 		for i := 0; i < rule.amount; i++ {
 			crateToMove, _ := crateStacks[rule.from].Pop()
 			crateStacks[rule.to].Push(crateToMove)
 		}
+
 	}
 
-	var topCrates string
-	for _, crateStack := range crateStacks {
-		topCrate, _ := crateStack.Pop()
-		topCrates += topCrate
-	}
-
-	return topCrates
+	return getTopCrates(crateStacks)
 }
 
-func part2(inputLines []string) int {
-	return 1
+func part2(inputLines []string) string {
+
+	crateStacks, rules := parseInput(inputLines)
+	
+	for rules.Size() != 0 {
+
+		rule, _ := rules.Pop()
+
+		tempStack := stack.New[string]()
+		for i := 0; i < rule.amount; i++ {
+			crateToMove, _ := crateStacks[rule.from].Pop()
+			tempStack.Push(crateToMove)
+		}
+
+		for tempStack.Size() != 0 {
+			crateToMove, _ := tempStack.Pop()
+			crateStacks[rule.to].Push(crateToMove)
+		}
+
+	}
+
+	return getTopCrates(crateStacks)
 }
 
 func parseInput(inputLines []string) ([]stack.LinkedStack[string], stack.LinkedStack[rule]) {
@@ -99,6 +116,16 @@ func parseInput(inputLines []string) ([]stack.LinkedStack[string], stack.LinkedS
 	}
 
 	return crateStacks, rules
+}
+
+func getTopCrates(crateStacks []stack.LinkedStack[string]) string {
+	var topCrates string
+	for _, crateStack := range crateStacks {
+		topCrate, _ := crateStack.Pop()
+		topCrates += topCrate
+	}
+
+	return topCrates
 }
 
 type rule struct {

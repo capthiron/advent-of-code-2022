@@ -23,7 +23,7 @@ func TestPart1(t *testing.T) {
 
 func TestPart2(t *testing.T) {
 	result := part2(inputLines)
-	if result != 0 {
-		t.Errorf("expected part2 to return 0 but was %v.", result)
+	if result != "MCD" {
+		t.Errorf("expected part2 to return MCD but was %v.", result)
 	}
 }
