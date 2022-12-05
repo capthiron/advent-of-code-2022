@@ -69,13 +69,13 @@ func parseInput(inputLines []string) ([]stack.LinkedStack[string], stack.LinkedS
 		if rulesDone {
 
 			var cratesInLine []string
-			for i := 0; i <= len(line) - 3; i += 4 {
+			for i := 0; i <= len(line)-3; i += 4 {
 
-				crate := line[i:i+3]
+				crate := line[i : i+3]
 				if len(strings.TrimSpace(crate)) == 0 {
 					cratesInLine = append(cratesInLine, "")
 					continue
-				}	
+				}
 
 				cratesInLine = append(cratesInLine, string(crate[1]))
 			}
@@ -103,13 +103,13 @@ func parseInput(inputLines []string) ([]stack.LinkedStack[string], stack.LinkedS
 
 type rule struct {
 	amount int
-	from int
-	to int
+	from   int
+	to     int
 }
 
 func ruleFrom(line string) *rule {
-  re := regexp.MustCompile(`\d+`) 
-  extraction := re.FindAllString(line, -1)
+	re := regexp.MustCompile(`\d+`)
+	extraction := re.FindAllString(line, -1)
 	amount, _ := strconv.Atoi(extraction[0])
 	from, _ := strconv.Atoi(extraction[1])
 	to, _ := strconv.Atoi(extraction[2])
